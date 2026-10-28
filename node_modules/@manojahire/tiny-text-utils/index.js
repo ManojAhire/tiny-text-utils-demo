@@ -1,0 +1,14 @@
+function slugify(text) {
+  return String(text)
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function capitalize(text) {
+  const str = String(text);
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+module.exports = { slugify, capitalize };
